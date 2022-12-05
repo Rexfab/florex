@@ -19,6 +19,10 @@ html{
     font-size: 62.5%;
 }
 
+body{
+    position: relative;
+}
+
 section{
     padding: 2rem 9%;
 }
@@ -438,37 +442,45 @@ header .icons a:hover {
     border-color: var(--pink);
 }
 
-.footer .box-container {
+.footer{
+    background-color: #999;
+}
+
+.footer .box-container-footer {
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+
+
 }
 
-.footer .box-container .box {
-    flex: 1 1 25rem;
+.footer .box-container-footer .box {
+    flex: 1 1 15rem;
     border: none;
     box-shadow: none;
 }
 
-.footer .box-container .box h3 {
+.footer .box-container-footer .box h3 {
     color: #333;
     font-size: 2.5rem;
     padding: 1rem 0;
 }
 
-.footer .box-container .box a {
+.footer .box-container-footer .box a {
     display: block;
     color: #666;
     font-size: 1.5rem;
     padding: 1rem 0;
 }
 
-.footer .box-container .box a:hover {
+.footer .box-container-footer .box a:hover {
     color: var(--pink);
     text-decoration: underline;
 }
 
-.footer .box-container .box img {
+.footer .box-container-footer .box img {
     height: 2rem;
     width: auto;
     display: inline-block;
@@ -484,10 +496,23 @@ header .icons a:hover {
     color: #333;
     border-top: 1px solid var(--opacity);
     padding-bottom: 9rem;
+    background-color: #fae3e9;    
 }
 
 .footer .credit span {
     color: var(--pink);
+}
+
+
+.overlay{
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.99);
 }
 
 /* media queries */
@@ -511,6 +536,7 @@ header .icons a:hover {
     header .fa-bars{
         display: block;
     }
+
     header .navbar {
         position: absolute;
         top: 100%;
@@ -520,15 +546,21 @@ header .icons a:hover {
         border-top: 1px solid var(--opacity);
         clip-path: polygon(0 0,100% 0,100% 0, 0 0);
     }
+
     header #toggler:checked ~ .navbar{
         clip-path: polygon(0 0,100% 0,100% 100%, 0 100%);
     }
+
     header .navbar a {
         display: block;
         margin: 1.5rem;
         padding: 1.5rem;
-    background: #fff;
-    border: 1px solid var(--opacity); 
+        background: #fff;
+        border: 1px solid var(--opacity); 
+    }
+
+    section{
+        padding: 2rem 0;
     }
 
     .home .content span {
@@ -540,6 +572,23 @@ header .icons a:hover {
     .icons-container .icons span {
         font-size: 1.7rem;
     }
+
+    .footer .box-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        background-color: #999;
+        padding-bottom: 2rem;
+        margin-bottom: -2rem;
+    }
+
+    .footer .credit {
+        background-color: #fae3e9;
+        padding: 2rem 0;
+        margin-top: 0;
+        margin: 1.5rem -2.2rem -2rem -2.2rem;
+
+    }
 }
 
 @media (max-width:450px){
@@ -548,6 +597,12 @@ header .icons a:hover {
     }
     .heading {
         font-size: 3rem;
+    }
+
+    .footer .box-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
     }
 }
 
