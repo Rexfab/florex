@@ -503,6 +503,9 @@ header .icons a:hover {
     color: var(--pink);
 }
 
+.credit span a {
+    color: var(--pink);
+}
 
 .overlay{
     width: 100%;
@@ -537,6 +540,10 @@ header .icons a:hover {
         display: block;
     }
 
+    .box .image .icons {
+        bottom: 0;
+    }
+
     header .navbar {
         position: absolute;
         top: 100%;
@@ -560,7 +567,7 @@ header .icons a:hover {
     }
 
     section{
-        padding: 2rem 0;
+        padding: 2rem ;
     }
 
     .home .content span {
@@ -584,13 +591,12 @@ header .icons a:hover {
 
     .footer .credit {
         background-color: #fae3e9;
-        padding: 2rem 0;
+        padding: 2rem 3rem ;
         margin-top: 0;
         margin: 1.5rem -2.2rem -2rem -2.2rem;
-
     }
-}
 
+}
 @media (max-width:450px){
     html {
         font-size: 50%;
@@ -598,7 +604,6 @@ header .icons a:hover {
     .heading {
         font-size: 3rem;
     }
-
     .footer .box-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
